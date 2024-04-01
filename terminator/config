@@ -1,0 +1,28 @@
+[global_config]
+  window_state = maximise
+[keybindings]
+  cycle_next = <Primary><Alt>Tab
+  cycle_prev = <Primary><Alt>grave
+  go_next = <Primary><Shift>n
+  go_up = <Primary>Up
+  go_down = <Primary>Down
+  go_left = <Primary>Left
+  go_right = <Primary>Right
+  next_tab = <Primary>Tab
+  prev_tab = <Primary><Alt>KP_Next
+[profiles]
+  [[default]]
+    background_color = "#300a24"
+    cursor_color = "#aaaaaa"
+    foreground_color = "#ffffff"
+    palette = "#000000:#cc0000:#4e9a06:#c4a000:#3465a4:#75507b:#06989a:#d3d7cf:#555753:#ef2929:#8ae234:#fce94f:#729fcf:#ad7fa8:#34e2e2:#eeeeec"
+    use_theme_colors = True
+[layouts]
+  [[default]]
+    [[[window0]]]
+      type = Window
+      parent = ""
+    [[[child1]]]
+      type = Terminal
+      parent = window0
+[plugins]
