@@ -109,6 +109,8 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+alias vim="nvim"
+alias aws_login="aws sso login && aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin 588188713524.dkr.ecr.us-east-1.amazonaws.com"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
@@ -121,4 +123,3 @@ export PATH="$PATH:/Users/karthik.kalidas/.local/bin"
 export PATH="$(brew --prefix)/opt/curl/bin:$PATH"
 export ARCH=arm64
 export SSH_FILE_NAME=id_ed25519
-alias aws_login="aws sso login && aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin 588188713524.dkr.ecr.us-east-1.amazonaws.com"
