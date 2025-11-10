@@ -248,5 +248,9 @@
     {
         "key": "ctrl+shift+cmd+n",
         "command": "explorer.newFile"
+    },
+    {
+        "key": "cmd",
+        "command": "workbench.action.switchWindow"
     }
 ]
