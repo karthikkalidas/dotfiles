@@ -8,3 +8,15 @@ vim.diagnostic.config({
 })
 
 vim.g.ai_cmp = false
+
+require("noice").setup({
+  routes = {
+    {
+      filter = {
+        event = "lsp",
+        kind = "progress",
+      },
+      opts = { skip = true }, -- Hides all LSP progress notifications
+    },
+  },
+})
