@@ -33,11 +33,12 @@
   "gitlens.currentLine.enabled": false,
   "editor.lineNumbers": "on",
   "security.workspace.trust.untrustedFiles": "open",
-  "chat.tools.global.autoApprove": true,
   "chat.editing.confirmEditRequestRetry": false,
   "python.defaultInterpreterPath": "/opt/homebrew/bin/python3.13",
   "chat.agent.maxRequests": 100,
   "explorer.confirmDragAndDrop": false,
   "redhat.telemetry.enabled": true,
   "editor.smoothScrolling": true,
+  "jupyter.askForKernelRestart": false,
+  "python.terminal.useEnvFile": true
 }

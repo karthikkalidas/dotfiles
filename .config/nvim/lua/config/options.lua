@@ -1,7 +1,10 @@
 -- Options are automatically loaded before lazy.nvim startup
 -- Default options that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/options.lua
 -- Add any additional options here
+vim.opt.conceallevel = 0
 
-vim.wo.number = true
-vim.wo.relativenumber = true
-vim.diagnostic.enable(false)
+vim.diagnostic.config({
+  severity = { min = vim.diagnostic.severity.ERROR },
+})
+
+vim.g.ai_cmp = false
