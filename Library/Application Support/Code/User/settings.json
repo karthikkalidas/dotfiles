@@ -1,44 +1,60 @@
 {
-  "window.commandCenter": false,
-  "workbench.layoutControl.enabled": false,
-  "chat.commandCenter.enabled": false,
+  "window.restoreFullscreen": true,
+  "github.copilot.nextEditSuggestions.enabled": true,
   "workbench.activityBar.location": "hidden",
-  "workbench.startupEditor": "none",
-  "vim.smartRelativeLine": true,
+  "window.commandCenter": false,
+  "chat.commandCenter.enabled": false,
+  "workbench.layoutControl.enabled": false,
+  "gitlens.plusFeatures.enabled": false,
+  "workbench.editor.editorActionsLocation": "hidden",
+  "workbench.secondarySideBar.defaultVisibility": "hidden",
+  "editor.formatOnSave": true,
+  "editor.lineNumbers": "relative",
+  // "editor.lineNumbers": "on",
   "vim.highlightedyank.enable": true,
   "vim.highlightedyank.color": "#a9dc7660",
   "vim.highlightedyank.duration": 250,
   "vim.useSystemClipboard": true,
-  // "editor.formatOnSave": true,
-  "editor.formatOnSaveMode": "modifications",
-  "editor.minimap.enabled": false,
-  "window.restoreFullscreen": true,
-  "window.newWindowDimensions": "maximized",
-  "workbench.editor.restoreViewState": true,
-  "workbench.editor.enablePreview": false,
-  "github.copilot.nextEditSuggestions.enabled": true,
-  "explorer.confirmDelete": false,
-  "python.experiments.optOutFrom": [
-    "pythonTerminalEnvVarActivation"
+  "vim.normalModeKeyBindingsNonRecursive": [
+    {
+      "before": ["g", "r"],
+      "commands": ["editor.action.referenceSearch.trigger"]
+    },
+    {
+      "before": ["<C-p>"],
+      "commands": ["paste"]
+    }
   ],
-  "python.terminal.activateEnvironment": false,
-  "python.terminal.activateEnvInCurrentTerminal": false,
-  "python.terminal.shellIntegration.enabled": false,
+  "vim.visualModeKeyBindingsNonRecursive": [
+    {
+      "before": ["<C-p>"],
+      "commands": [":normal! pgvygv"]
+    }
+  ],
+  "workbench.startupEditor": "none",
   "window.zoomLevel": 3,
   "workbench.colorTheme": "Catppuccin Mocha",
-  "extensions.ignoreRecommendations": true,
-  "editor.stickyScroll.enabled": false,
-  "gitlens.codeLens.authors.enabled": false,
-  "gitlens.codeLens.recentChange.enabled": false,
+  "window.newWindowDimensions": "fullscreen",
+  "gitlens.currentLine.pullRequests.enabled": false,
   "gitlens.currentLine.enabled": false,
-  "editor.lineNumbers": "on",
-  "security.workspace.trust.untrustedFiles": "open",
-  "chat.editing.confirmEditRequestRetry": false,
+  "gitlens.codeLens.enabled": false,
+  "gitlens.statusBar.enabled": false,
+  "editor.renderWhitespace": "none",
+  "editor.minimap.renderCharacters": false,
+  "editor.minimap.enabled": false,
+  "editor.scrollbar.verticalScrollbarSize": 0,
+  "scm.diffDecorationsGutterAction": "none",
+  "explorer.confirmDelete": false,
+  "editor.stickyScroll.enabled": false,
+  "workbench.editor.empty.hint": "hidden",
+  "python.terminal.activateEnvironment": false,
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "extensions.ignoreRecommendations": true,
+  "[markdown]": {
+    "editor.defaultFormatter": "DavidAnson.vscode-markdownlint"
+  },
   "python.defaultInterpreterPath": "/opt/homebrew/bin/python3.13",
-  "chat.agent.maxRequests": 100,
-  "explorer.confirmDragAndDrop": false,
-  "redhat.telemetry.enabled": true,
-  "editor.smoothScrolling": true,
-  "jupyter.askForKernelRestart": false,
-  "python.terminal.useEnvFile": true
+  "chat.mcp.gallery.enabled": true,
 }
