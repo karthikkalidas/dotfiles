@@ -24,6 +24,9 @@ sudo tee /etc/brave/policies/managed/bloat.json >/dev/null <<'EOF'
   "BraveWalletDisabled": true,
   "BraveVPNDisabled": true,
   "BraveAIChatEnabled": false,
+  "MetricsReportingEnabled": false,
+  "BraveP3AEnabled": false,
+  "BraveStatsPingEnabled": false
   "BraveNewsDisabled": true,
   "BraveTalkDisabled": true,
   "SyncDisabled": true,
@@ -36,7 +39,6 @@ EOF
 sudo usermod -s $(which zsh) root
 sudo chsh -s $(which zsh)
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-rm ~/.zshrc # replaced by dotfile
 
 # GithubCLI
 (type -p wget >/dev/null || (sudo apt update && sudo apt install wget -y)) \
@@ -52,4 +54,7 @@ rm ~/.zshrc # replaced by dotfile
 gh auth login
 
 # dotfiles
-stow .
+stow . --adopt
+
+# Logout and relogin for gnome changes to take place
+gnome-session-quit --logout --no-prompt
