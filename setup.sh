@@ -3,7 +3,7 @@
 sudo dpkg --add-architecture i386
 sudo apt update
 sudo apt upgrade
-sudo apt install -y wget curl git vim tmux neovim ca-certificates software-properties-common steam ghostty stow zsh fonts-font-awesome npm python3 python3-pip python3-venv lazygit
+sudo apt install -y wget curl git vim tmux neovim ca-certificates software-properties-common steam ghostty stow zsh fonts-font-awesome npm python3 python3-pip python3-venv lazygit ripgrep
 
 sudo snap install --classic code
 
