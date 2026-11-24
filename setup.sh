@@ -3,8 +3,9 @@
 sudo dpkg --add-architecture i386
 sudo apt update
 sudo apt upgrade
-sudo apt install -y wget curl git vim tmux neovim ca-certificates software-properties-common steam ghostty stow zsh fonts-font-awesome npm python3 python3-pip python3-venv lazygit ripgrep
+sudo apt install -y wget curl git vim tmux neovim ca-certificates software-properties-common steam ghostty stow zsh fonts-font-awesome npm python3 python3-pip python3-venv lazygit ripgrep gettext ddcutil
 
+sudo snap install freecad
 sudo snap install --classic code
 
 curl -fsS https://dl.brave.com/install.sh | sh
@@ -59,5 +60,22 @@ gh auth login
 # dotfiles
 stow . --adopt
 
-# Logout and relogin for gnome changes to take place
+# Brightness control
+sudo modprobe i2c-dev
+echo i2c-dev | sudo tee /etc/modules-load.d/i2c-dev.conf >/dev/null
+
+if [ -f /usr/share/ddcutil/data/60-ddcutil-i2c.rules ]; then
+  sudo install -m 0644 /usr/share/ddcutil/data/60-ddcutil-i2c.rules /etc/udev/rules.d/60-ddcutil-i2c.rules
+  sudo udevadm control --reload-rules || true
+  sudo udevadm trigger --subsystem-match=i2c-dev || true
+fi
+
+sudo groupadd --system i2c
+sudo usermod -aG i2c "$USER"
+
+git clone "https://github.com/Tim-van-Oudheusden/gnome-display-brightness-ddcutil.git" "$HOME/gnome-display-brightness-ddcutil"
+make -C "$HOME/gnome-display-brightness-ddcutil" install
+
+gnome-extensions enable display-brightness-ddcutil@tim-van-oudheusden.github.io
+echo "Relogin for GNOME changes to take affect, then run: gnome-extensions enable display-brightness-ddcutil@tim-van-oudheusden.github.io"
 gnome-session-quit --logout --no-prompt

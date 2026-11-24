@@ -17,3 +17,4 @@ bindkey -v
 
 export PATH="$PATH:$HOME/.local/bin"
 export SSH_FILE_NAME=id_ed25519
+export PATH=/home/karthik-kalidas/.opencode/bin:$PATH
