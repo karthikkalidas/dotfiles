@@ -77,5 +77,7 @@ git clone "https://github.com/Tim-van-Oudheusden/gnome-display-brightness-ddcuti
 make -C "$HOME/gnome-display-brightness-ddcutil" install
 
 gnome-extensions enable display-brightness-ddcutil@tim-van-oudheusden.github.io
-echo "Relogin for GNOME changes to take affect, then run: gnome-extensions enable display-brightness-ddcutil@tim-van-oudheusden.github.io"
-gnome-session-quit --logout --no-prompt
+echo "Relogin for GNOME changes to take affect:"
+echo ""
+echo "gnome-session-quit --logout --no-prompt"
+echo "gnome-extensions enable display-brightness-ddcutil@tim-van-oudheusden.github.io"
