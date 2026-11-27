@@ -1,17 +1,18 @@
-## One-click Ubuntu26 setup 
+## One-click Ubuntu 26 setup
 
 ```bash
-    curl -O https://raw.githubusercontent.com/karthikkalidas/dotfiles/refs/heads/master/setup.sh
-    ./setup.sh
+git clone https://github.com/karthikkalidas/dotfiles.git
+cd dotfiles
+./setup.sh
 ```
-
 
 ## For only applying dotfiles
 
 ```bash
-    sudo apt install -y git stow
-    git clone https://github.com/karthikkalidas/dotfiles.git
-    cd dotfiles
-    stow .
+sudo apt install -y git stow
+git clone https://github.com/karthikkalidas/dotfiles.git
+cd dotfiles
+stow .
 ```
-Use stow . --adopt to prevent overwriting existing dotfiles
+
+Use `stow . --adopt` if `$HOME` already contains conflicting files; it moves them into the repo instead of failing.
