@@ -8,6 +8,8 @@ sudo apt install -y wget curl git vim tmux neovim ca-certificates software-prope
 sudo snap install freecad
 sudo snap install --classic code
 
+curl -fsSL https://get.docker.com | sh
+sudo usermod -aG docker $USER
 curl -fsS https://dl.brave.com/install.sh | sh
 curl -fsSL https://claude.ai/install.sh | bash
 curl -fsSL https://opencode.ai/v2/install | bash
