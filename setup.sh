@@ -35,6 +35,7 @@ sudo apt install -y \
   tmux \
   vim \
   wget \
+  wl-clipboard \
   zsh
 
 # Snap packages

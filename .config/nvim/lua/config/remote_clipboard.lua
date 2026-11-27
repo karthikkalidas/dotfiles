@@ -59,7 +59,7 @@ function M.setup()
 
     return function(lines)
       if has_wayland then
-        local cmd = { "wl-copy", "--sensitive", "--type", "text/plain" }
+        local cmd = { "wl-copy", "--type", "text/plain" }
         if register == "*" then
           cmd[#cmd + 1] = "--primary"
         end
